@@ -1,15 +1,27 @@
 import React from "react";
-import {CardBuilder} from "./CardBuilder";
+import CardBuilder from "./CardBuilder";
+import CardBuilder2 from "./CardBuilder2";
+// import {DateDropdown} from "./DateDropdown"
 
 const DailyImageCard = props =>{
-    <div className="card-container">
-        <CardBuilder 
-        copyright = {props.copyright};
-        date = {props.date};
-        content = {props.explanation};
-        imgUrl = {props.hdurl};
-        title = {props.title};
-        />;
-    </div>
+    return (
+        <div className="card-container">
+            {/* <DateDropdown/> */}
+            <CardBuilder2 //low res image card
+           copyright = {props.copyright}
+           date = {props.date}
+           explanation = {props.explanation}
+           url = {props.url}
+           title = {props.title}
+           />
+            <CardBuilder // HD image card
+            copyright = {props.copyright}
+            date = {props.date}
+            explanation = {props.explanation}
+            hdurl = {props.hdurl}
+            title = {props.title}
+            />
+        </div>
+    )
 }
 export default DailyImageCard;

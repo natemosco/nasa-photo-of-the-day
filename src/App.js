@@ -15,16 +15,20 @@ function App() {
     .catch(error =>{
       console.log("there was an error and nasa data not imported", error);
     })
-  
   },[])
+  
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun!
-      </p>
-    </div>
+      <Card {...nasaData}
+            // copyright = {nasaData.copyright}
+            // date = {nasaData.date}
+            // explanation = {nasaData.explanation}
+            // hdurl = {nasaData.hdurl}
+            // title = {nasaData.title}/>
+            //url = {nasaData.url}
+            ></Card>
+    </div>  
   );
 }
 
